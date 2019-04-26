@@ -8,7 +8,7 @@ import (
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	message := r.URL.Path
 	message = strings.TrimPrefix(message, "/")
-	message = "Hello " + message
+	message = "Hello " + message + ", welcome to my simple Go server!\n\nChange the text after 'localhost:8080/' in your address bar and press ENTER."
 
 	w.Write([]byte(message))
 }
